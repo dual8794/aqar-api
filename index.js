@@ -7,10 +7,10 @@ const app = express()
 
 const listings = []
 
-app.get('/', (req , res) => {res.json('Welcome to my aqar API')
-})
+// app.get('/', (req , res) => {res.json('Welcome to my aqar API')
+// })
 
-app.get('/aqar', (req , res) => { axios.get('https://sa.aqar.fm/')
+app.get('/', (req , res) => { axios.get('https://sa.aqar.fm/')
 .then((response) => {
     const html = response.data
     const $ = cheerio.load(html)
